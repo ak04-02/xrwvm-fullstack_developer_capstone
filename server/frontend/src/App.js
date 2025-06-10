@@ -1,15 +1,16 @@
-import LoginPanel from "./components/Login/Login"
+import LoginPanel from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<LoginPanel />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/login" element={<LoginPanel />} />
+      <Route path="/register" element={<Register />} />
+      {/* <Route path="/dealers" element={<Dealers/>} />
+      <Route path="/dealer/:id" element={<Dealer/>} />
+      <Route path="/postreview/:id" element={<PostReview/>} /> */}
+    </Routes>
   );
 }
-
+export default App;
